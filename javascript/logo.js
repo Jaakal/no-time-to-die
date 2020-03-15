@@ -1936,3 +1936,5 @@ $(".refresh").on("click", function() {
 
   draw();
 });
+
+$(window).on('resize',function() { location.reload(); });
