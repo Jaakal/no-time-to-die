@@ -34,7 +34,7 @@ Open `index.html` file in your browser
 
 <a href="https://github.com/Jaakal" target="_blank">
     
-  ![Screenshot Image](app/assets/images/jaak-profile.png) 
+  ![Screenshot Image](images/jaak-profile.png) 
 
 </a>
 
