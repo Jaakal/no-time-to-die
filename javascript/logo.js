@@ -1,7 +1,3 @@
-$(".refresh").on("click", function() {
-  location.reload();
-});
-
 function setupCanvas(canvas) {
   // Get the device pixel ratio, falling back to 1.
   let devicePixelRatio = window.devicePixelRatio || 1;
@@ -22,139 +18,6 @@ function setupCanvas(canvas) {
   
   return context;
 }
-
-// function drawLetterN(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                  , yStart);
-//   context.lineTo(xStart + unitLength * 11, yStart);
-//   context.lineTo(xStart + unitLength * 23, yStart + unitLength * 25);
-//   context.lineTo(xStart + unitLength * 23, yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 12, yStart + unitLength * 27);
-//   context.lineTo(xStart                  , yStart + unitLength * 2);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart                 , yStart + unitLength * 7);
-//   context.lineTo(xStart + unitLength * 8, yStart + unitLength * 23.667);
-//   context.lineTo(xStart + unitLength * 8, yStart + unitLength * 27);
-//   context.lineTo(xStart                 , yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 15, yStart);
-//   context.lineTo(xStart + unitLength * 23, yStart);
-//   context.lineTo(xStart + unitLength * 23, yStart + unitLength * 20);
-//   context.lineTo(xStart + unitLength * 15, yStart + unitLength * 3.333);
-//   context.fill();
-// }
-
-// function drawLetterO(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 10, yStart);
-//   context.bezierCurveTo(xStart - unitLength * 3.2, yStart, xStart - unitLength * 3.2, yStart + unitLength * 27, xStart + unitLength * 10, yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 12, yStart);
-//   context.bezierCurveTo(xStart + unitLength * 25.2, yStart, xStart + unitLength * 25.2, yStart + unitLength * 27, xStart + unitLength * 12, yStart + unitLength * 27);
-//   context.fill();
-// }
-
-// function drawLetterT(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                   , yStart);
-//   context.lineTo(xStart + unitLength * 6.5, yStart);
-//   context.lineTo(xStart                   , yStart + unitLength * 13);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 7 , yStart);
-//   context.lineTo(xStart + unitLength * 16, yStart);
-//   context.lineTo(xStart + unitLength * 16, yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 7 , yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 16.5, yStart);
-//   context.lineTo(xStart + unitLength * 23  , yStart);
-//   context.lineTo(xStart + unitLength * 23  , yStart + unitLength * 13);
-//   context.fill();
-// }
-
-// function drawLetterI(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                  , yStart);
-//   context.lineTo(xStart + unitLength * 10, yStart);
-//   context.lineTo(xStart + unitLength * 10, yStart + unitLength * 27);
-//   context.lineTo(xStart                  , yStart + unitLength * 27);
-//   context.fill();
-// }
-
-// function drawLetterM(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                     , yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 4.611, yStart + unitLength * 9.214);
-//   context.lineTo(xStart + unitLength * 8.704, yStart + unitLength * 25);
-//   context.lineTo(xStart + unitLength * 8.185, yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 5.704 , yStart + unitLength * 5);
-//   context.lineTo(xStart + unitLength * 7     , yStart);
-//   context.lineTo(xStart + unitLength * 13    , yStart);
-//   context.lineTo(xStart + unitLength * 19.985, yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 11.404, yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 16.504, yStart + unitLength * 5);
-//   context.lineTo(xStart + unitLength * 17.8  , yStart);
-//   context.lineTo(xStart + unitLength * 23.8  , yStart);
-//   context.lineTo(xStart + unitLength * 30.8  , yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 22.208, yStart + unitLength * 27);
-//   context.fill();
-// }
-
-// function drawLetterE(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                 , yStart);
-//   context.lineTo(xStart + unitLength * 9, yStart);
-//   context.lineTo(xStart + unitLength * 9, yStart + unitLength * 27);
-//   context.lineTo(xStart                 , yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 9.5 , yStart);
-//   context.lineTo(xStart + unitLength * 18.5, yStart);
-//   context.lineTo(xStart + unitLength * 18.5, yStart + unitLength * 11);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 9.5 , yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 18.5, yStart + unitLength * 27);
-//   context.lineTo(xStart + unitLength * 18.5, yStart + unitLength * 16);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 9.5 , yStart + unitLength * 13.5);
-//   context.lineTo(xStart + unitLength * 15.5, yStart + unitLength * 8);
-//   context.lineTo(xStart + unitLength * 15.5, yStart + unitLength * 19);
-//   context.fill();
-// }
-
-// function drawLetterD(context, xStart, yStart, unitLength) {
-//   context.beginPath();
-//   context.moveTo(xStart                  , yStart);
-//   context.lineTo(xStart + unitLength * 10, yStart);
-//   context.lineTo(xStart + unitLength * 10, yStart + unitLength * 27);
-//   context.lineTo(xStart                  , yStart + unitLength * 27);
-//   context.fill();
-
-//   context.beginPath();
-//   context.moveTo(xStart + unitLength * 12, yStart);
-//   context.bezierCurveTo(xStart + unitLength * 25.2, yStart, xStart + unitLength * 25.2, yStart + unitLength * 27, xStart + unitLength * 12, yStart + unitLength * 27);
-//   context.fill();
-// }
 
 // Calculates vector length
 function vectorLength(x1, y1, x2, y2) {
@@ -2051,7 +1914,7 @@ function draw() {
   window.requestAnimationFrame(draw);
 }
 
-$(document).ready(function() {
+$(".refresh").on("click", function() {
   time = new Date();
   startTime = startTime || (time.getSeconds() * 1000 + time.getMilliseconds());
 
@@ -2072,23 +1935,4 @@ $(document).ready(function() {
   letterFunctionsArray.push(draw007Logo);
 
   draw();
-
-  // // Line one
-  // drawLetterN(context, xStart, yStart, unitLength);
-  // drawLetterO(context, xStart + unitLength * 25, yStart, unitLength);
-
-  // // Line two
-  // drawLetterT(context, xStart, yStart + unitLength * 29, unitLength);
-  // drawLetterI(context, xStart + unitLength * 25, yStart + unitLength * 29, unitLength);
-  // drawLetterM(context, xStart + unitLength * 36, yStart + unitLength * 29, unitLength);
-  // drawLetterE(context, xStart + unitLength * 67.8, yStart + unitLength * 29, unitLength);
-
-  // // Line three
-  // drawLetterT(context, xStart + unitLength * 25, yStart + unitLength * 58, unitLength);
-  // drawLetterO(context, xStart + unitLength * 50, yStart + unitLength * 58, unitLength);
-
-  // // Line four
-  // drawLetterD(context, xStart + unitLength * 50, yStart + unitLength * 87, unitLength);
-  // drawLetterI(context, xStart + unitLength * 73, yStart + unitLength * 87, unitLength);
-  // drawLetterE(context, xStart + unitLength * 85, yStart + unitLength * 87, unitLength);
 });

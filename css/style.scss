@@ -56,49 +56,49 @@ $button-color: #03e9f4;
   filter: hue-rotate(290deg);
   -webkit-box-reflect: below 4px linear-gradient(transparent, $background-color);
 
-  // span {
-  //   position: absolute;
-  //   display: block;
-  // }
+  span {
+    position: absolute;
+    display: block;
+  }
 
-  // span:nth-child(1) {
-  //   top: 0;
-  //   left: -100%;
-  //   width: 100%;
-  //   height: 2px;
-  //   background: linear-gradient(90deg, transparent, $button-color);
-  //   animation: animate1 1s linear infinite;
-  // }
+  span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $button-color);
+    animation: animate1 1s linear infinite;
+  }
   
-  // span:nth-child(2) {
-  //   top: -100%;
-  //   right: 0;
-  //   width: 2px;
-  //   height: 100%;
-  //   background: linear-gradient(180deg, transparent, $button-color);
-  //   animation: animate2 1s linear infinite;
-  //   animation-delay: 0.25s;
-  // }
+  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $button-color);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
  
-  // span:nth-child(3) {
-  //   bottom: 0;
-  //   right: -100%;
-  //   width: 100%;
-  //   height: 2px;
-  //   background: linear-gradient(270deg, transparent, $button-color);
-  //   animation: animate3 1s linear infinite;
-  //   animation-delay: 0.5s;
-  // }
+  span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, $button-color);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
   
-  // span:nth-child(4) {
-  //   bottom: -100%;
-  //   left: 0;
-  //   width: 2px;
-  //   height: 100%;
-  //   background: linear-gradient(360deg, transparent, $button-color);
-  //   animation: animate4 1s linear infinite;
-  //   animation-delay: 0.75s;
-  // }
+  span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, $button-color);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
 
   &:hover {
     background: $button-color;
