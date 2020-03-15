@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'Italianno';
+  src: url('../fonts/Italianno-Regular.eot');
+  src: url('../fonts/Italianno-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Italianno-Regular.woff2') format('woff2'),
+      url('../fonts/Italianno-Regular.woff') format('woff'),
+      url('../fonts/Italianno-Regular.ttf') format('truetype'),
+      url('../fonts/Italianno-Regular.svg#Italianno-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$background-color: #010203;
+$button-color: #03e9f4;
+// $button-color: #00b3ff;
+// $button-color: #00a8ff;
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+  // background-color: red;
+}
+
+.canvas {
+  max-width: 1000px;
+  max-height: 800px;
+  width: 85%;
+  height: 85%;
+  background-color: $background-color;
+}
+
+.logo {
+  display: none;
+}
+
+.refresh {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  color: $button-color;
+  overflow: hidden;
+
+  margin-top: 10px;
+  font-family: 'Italianno';
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: 0.5s;
+  filter: hue-rotate(290deg);
+  -webkit-box-reflect: below 4px linear-gradient(transparent, $background-color);
+
+  // span {
+  //   position: absolute;
+  //   display: block;
+  // }
+
+  // span:nth-child(1) {
+  //   top: 0;
+  //   left: -100%;
+  //   width: 100%;
+  //   height: 2px;
+  //   background: linear-gradient(90deg, transparent, $button-color);
+  //   animation: animate1 1s linear infinite;
+  // }
+  
+  // span:nth-child(2) {
+  //   top: -100%;
+  //   right: 0;
+  //   width: 2px;
+  //   height: 100%;
+  //   background: linear-gradient(180deg, transparent, $button-color);
+  //   animation: animate2 1s linear infinite;
+  //   animation-delay: 0.25s;
+  // }
+ 
+  // span:nth-child(3) {
+  //   bottom: 0;
+  //   right: -100%;
+  //   width: 100%;
+  //   height: 2px;
+  //   background: linear-gradient(270deg, transparent, $button-color);
+  //   animation: animate3 1s linear infinite;
+  //   animation-delay: 0.5s;
+  // }
+  
+  // span:nth-child(4) {
+  //   bottom: -100%;
+  //   left: 0;
+  //   width: 2px;
+  //   height: 100%;
+  //   background: linear-gradient(360deg, transparent, $button-color);
+  //   animation: animate4 1s linear infinite;
+  //   animation-delay: 0.75s;
+  // }
+
+  &:hover {
+    background: $button-color;
+    color: $background-color;
+    box-shadow: 0 0 5px $button-color,
+                0 0 25px $button-color,
+                0 0 50px $button-color,
+                0 0 100px $button-color;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  
+  50%,100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
