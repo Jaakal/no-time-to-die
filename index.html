@@ -11,13 +11,25 @@
 <body>
   <div class="container">
     <canvas class="canvas"></canvas>
-    <a class="refresh" href="javascript:void(0)">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      start
-    </a>
+    <div class="start-button-wrapper">
+      <a class="start-button original" href="javascript:void(0)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        start
+      </a>
+      <div class="reflection-wrapper">
+        <a class="start-button reflection" href="javascript:void(0)">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          start
+        </a>
+        <div class="reflection-mask"></div>
+      </div>
+    </div>
   </div>
   <img id="logo" src="/images/nttd-logo.png" alt="007 Logo">
   <script src="/javascript/logo.js"></script>

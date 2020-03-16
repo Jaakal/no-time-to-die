@@ -1886,13 +1886,18 @@ let logoY = yStart + unitLength * 58 + (unitLength * 27 - logoHeight) / 2;
 function draw007Logo() {
   logoPercentage = (currentTime - startTime - logoAnimationStart) / logoAnimationDuration;
 
-  if (!logoAnimationOver && logoPercentage >= 0) {
-    if (logoPercentage >= 1.0) {
-      logoAnimationOver = true;
-      logoAlpha = 1;
-    } else {
-      logoAlpha = logoPercentage;
+  if (!logoAnimationOver) {
+    if (logoPercentage >= 0) {
+      if (logoPercentage >= 1.0) {
+        logoAnimationOver = true;
+        logoAlpha = 1;
+      } else {
+        logoAlpha = logoPercentage;
+      }
     }
+  } else {
+    $('.original').addClass('original-fall-animation');
+    $('.reflection-wrapper').addClass('reflection-fall-animation');
   }
 
   context.save();
@@ -1914,7 +1919,7 @@ function draw() {
   window.requestAnimationFrame(draw);
 }
 
-$(".refresh").on("click", function() {
+$(".original").on("click", function() {
   time = new Date();
   startTime = startTime || (time.getSeconds() * 1000 + time.getMilliseconds());
 
@@ -1938,3 +1943,7 @@ $(".refresh").on("click", function() {
 });
 
 $(window).on('resize',function() { location.reload(); });
+
+$(document).ready(function() {
+  $('.start-button-wrapper').addClass('fade-in');
+})

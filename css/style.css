@@ -20,6 +20,8 @@
   width: 100vw;
   height: 100vh;
   background-color: #010203;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .canvas {
@@ -34,30 +36,41 @@
   display: none;
 }
 
-.refresh {
-  position: relative;
+.start-button-wrapper {
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.8s ease-in;
+  transition: 0.8s ease-in;
+  will-change: opacity;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.start-button {
   display: inline-block;
   padding: 15px 20px;
-  color: #03e9f4;
-  overflow: hidden;
-  margin-top: 10px;
   font-family: 'Italianno';
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  color: #03e9f4;
+  overflow: hidden;
   -webkit-filter: hue-rotate(290deg);
           filter: hue-rotate(290deg);
-  -webkit-box-reflect: below 4px linear-gradient(transparent, #010203);
 }
 
-.refresh span {
+.start-button span {
   position: absolute;
   display: block;
 }
 
-.refresh span:nth-child(1) {
+.start-button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -68,7 +81,7 @@
           animation: animate1 1s linear infinite;
 }
 
-.refresh span:nth-child(2) {
+.start-button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -81,7 +94,7 @@
           animation-delay: 0.25s;
 }
 
-.refresh span:nth-child(3) {
+.start-button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -94,7 +107,7 @@
           animation-delay: 0.5s;
 }
 
-.refresh span:nth-child(4) {
+.start-button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -107,11 +120,68 @@
           animation-delay: 0.75s;
 }
 
-.refresh:hover {
+.original:hover,
+.original:hover + .reflection-wrapper > .reflection {
   background: #03e9f4;
   color: #010203;
   -webkit-box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
           box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.reflection-wrapper {
+  position: relative;
+}
+
+.reflection {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.reflection:hover {
+  cursor: default;
+}
+
+.reflection-mask {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 200%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, #010203));
+  background: linear-gradient(to bottom, transparent, #010203 40%);
+  z-index: 2;
+}
+
+.original-fall-animation {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: opacity 0.9s, -webkit-transform 0.5s ease-in;
+  transition: opacity 0.9s, -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, opacity 0.9s;
+  transition: transform 0.5s ease-in, opacity 0.9s, -webkit-transform 0.5s ease-in;
+  will-change: transform, opacity;
+}
+
+.reflection-fall-animation {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transition: opacity 0.9s, -webkit-transform 0.5s ease-in;
+  transition: opacity 0.9s, -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, opacity 0.9s;
+  transition: transform 0.5s ease-in, opacity 0.9s, -webkit-transform 0.5s ease-in;
+  will-change: transform, opacity;
 }
 
 @-webkit-keyframes animate1 {
