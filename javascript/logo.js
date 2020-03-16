@@ -1897,7 +1897,8 @@ function draw007Logo() {
     }
   } else {
     $('.original').addClass('original-fall-animation');
-    $('.reflection-wrapper').addClass('reflection-fall-animation');
+    $('.start-button-wrapper .reflection-wrapper').addClass('reflection-fall-animation');
+    $('.refresh-button-wrapper').addClass('slide-in');
   }
 
   context.save();
@@ -1940,6 +1941,16 @@ $(".original").on("click", function() {
   letterFunctionsArray.push(draw007Logo);
 
   draw();
+});
+
+$(".refresh-button").on("click", function() {
+  $('.letter').addClass('fade-out');
+  $('.refresh-button-wrapper').addClass('close-button');
+  $('.canvas').addClass('fade-out');
+  $('.canvas').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {
+      location.reload();
+  });
 });
 
 $(window).on('resize',function() { location.reload(); });

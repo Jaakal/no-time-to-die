@@ -20,7 +20,8 @@ $button-color: #03e9f4;
   width: 100vw;
   height: 100vh;
   background-color: $background-color;
-  perspective: 1000px;
+  perspective: 5000px;
+  overflow: hidden;
 }
 
 .canvas {
@@ -29,13 +30,27 @@ $button-color: #03e9f4;
   width: 85%;
   height: 75%;
   background-color: $background-color;
+  transition: 0.5s ease 0.7s;
 }
 
+// 007 logo
 #logo {
   display: none;
 }
 
+.button-container {
+  position: relative;
+  width: 100%;
+  height: 25%;
+}
+
+
+// Start button
 .start-button-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 10px;
   opacity: 0;
   perspective: 1000px;
@@ -46,6 +61,10 @@ $button-color: #03e9f4;
 
 .fade-in {
   opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
 }
 
 .start-button {
@@ -134,8 +153,8 @@ $button-color: #03e9f4;
   top: 0;
   left: -100%;
   width: 300%;
-  height: 200%;
-  background: linear-gradient(to bottom, transparent, $background-color 40%);
+  height: 300%;
+  background: linear-gradient(to bottom, transparent, $background-color 25%);
   z-index: 2;
 }
 
@@ -144,7 +163,7 @@ $button-color: #03e9f4;
   transform-style: preserve-3d;
   transform: rotateX(-90deg);
   transform-origin: bottom center;
-  transition: transform 0.5s ease-in, opacity 0.9s;
+  transition: transform 0.5s ease-in, opacity 1s;
   will-change: transform, opacity;
 }
 
@@ -153,7 +172,7 @@ $button-color: #03e9f4;
   transform-style: preserve-3d;
   transform: rotateX(90deg);
   transform-origin: top center;
-  transition: transform 0.5s ease-in, opacity 0.9s;
+  transition: transform 0.5s ease-in, opacity 1s;
   will-change: transform, opacity;
 }
 
@@ -195,4 +214,204 @@ $button-color: #03e9f4;
   50%,100% {
     bottom: 100%;
   }
+}
+
+// Refresh button
+.refresh-button-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  opacity: 0;
+  overflow: hidden;
+  transform: translate3d(50px, 0, -1000px) rotateY(-90deg);
+  transform-origin: right;
+
+  .reflection-wrapper {
+    margin-top: 4px;
+  }
+}
+
+.refresh-button {
+  display: block;
+  position: relative;
+  padding: 15px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: #1670f0;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+
+  .letter {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  span:nth-child(5) {
+    transition: 0.5s;
+  }
+
+  span:nth-child(6) {
+    transition: 0.4s;
+  }
+
+  span:nth-child(7) {
+    transition: 0.6s;
+  }
+
+  span:nth-child(8) {
+    transition: 0.45s;
+  }
+
+  span:nth-child(9) {
+    transition: 0.5s;
+  }
+
+  span:nth-child(10) {
+    transition: 0.5s;
+  }
+
+  span:nth-child(11) {
+    transition: 0.5s;
+  }
+
+  &:hover,
+  &:hover + .reflection-wrapper > .reflection  {
+    span:nth-child(5) {
+      transform: translateZ(160px);
+    }
+    
+    span:nth-child(6) {
+      transform: translateZ(-100px);
+    }
+
+    span:nth-child(7) {
+      transform: translateZ(120px);
+    }
+
+    span:nth-child(8) {
+      transform: translateZ(180px);
+    }
+
+    span:nth-child(9) {
+      transform: translateZ(-260px);
+    }
+
+    span:nth-child(10) {
+      transform: translateZ(60px);
+    }
+
+    span:nth-child(11) {
+      transform: translateZ(260px);
+    }
+  }
+
+  span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0c002b, #1779ff);
+    transform: translateX(-100%);
+    will-change: transform, opacity;
+  }
+  
+  span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0c002b, #1779ff);
+    transform: translateY(-100%);
+    will-change: transform, opacity;
+  }
+  
+  span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #0c002b, #1779ff);
+    transform: translateX(100%);
+    will-change: transform, opacity;
+  }
+  
+  span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #0c002b, #1779ff);
+    transform: translateY(100%);
+    will-change: transform, opacity;
+  }
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0) rotateY(0);
+  transition: transform 2s ease-in-out, opacity 1s ease 0.5s;
+}
+
+.close-button {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.2s;
+}
+
+.refresh-button span:nth-child(1) {
+	animation: animate-1 2s linear infinite;
+}
+
+.refresh-button span:nth-child(2) {
+	animation: animate-2 2s 1s linear infinite;
+}
+
+.refresh-button span:nth-child(3) {
+	animation: animate-3 2s linear infinite;
+}
+
+.refresh-button span:nth-child(4) {
+	animation: animate-4 2s 1s linear infinite;
+}
+
+@keyframes animate-1 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes animate-2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+} 
+
+@keyframes animate-3 {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes animate-4 {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
 }
