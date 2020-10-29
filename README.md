@@ -1,6 +1,6 @@
 # No Time To Die
 
-In this project I recreated the ending logo animation from the trailer of the upcoming James Bond movie "No Time To Die." I've been a big Bond fan from a very young age, and when I noticed that amazing animation at the end of the trailer, I just couldn't help myself and started figuring out how to recreate it myself for the sake of both having fun and learning. I measured the dimensions of the glyphs from the screen with a ruler, and the link to the exact font I used is at the end. Regarding the animation timing and coordination, I just tried to replicate as closely as possible to the original by watching the animation over and over again at one fourth of the initial framerate (where there's a will, there's a way). I used a linear timing function, so it's not quite as smooth as the original. Ideally, I would have built it from the start with a custom timing functionality setting, because by the end it felt too painful to refactor the code in such a manner. Occasionally something goes haywire and the animation runs into a dead end, but refreshing the page and starting the animation again usually fixes that. There doesn't seem to be an obvious problem with the code, so if somebody has an answer for that, feel free to create an issue or DM me through any of the below social media accounts. The references for the animation start button and for the Youtube video are listed at the end as well.
+In this project I recreated the ending logo animation from the trailer of the upcoming James Bond movie "No Time To Die." I've been a big Bond fan from a very young age, and when I noticed that amazing animation at the end of the trailer, I just couldn't help myself and started figuring out how to recreate it myself for the sake of both having fun and learning. I measured the dimensions of the glyphs from the screen with a ruler, and the link to the exact font I used is at the end. Regarding to the animation timing and coordination, I just tried to replicate as closely as possible to the original by watching the animation over and over again at one fourth of the initial framerate - where there's a will, there's a way! I used a linear timing function, so it's not quite as smooth as the original. Ideally, I would have built it from the start with a custom timing functionality setting, because by the end it felt already too painful to refactor the code in such a manner.
 
 <div class="button-group">
   <a href="https://jaakal.github.io/no-time-to-die/" class="button">Live Version</a> |
@@ -11,8 +11,6 @@ In this project I recreated the ending logo animation from the trailer of the up
   <a href="#authors" class="button">Authors</a> |
   <a href="#license" class="button">License</a>
 </div>
-
-Link to live version [No Time To Die](https://jaakal.github.io/no-time-to-die/)
 
 ## Screenshot
 
@@ -34,7 +32,7 @@ Open `index.html` file in your browser
 
 * [JavaScript](https://www.javascript.com/) - Programming language used
 * [HTML](https://en.wikipedia.org/wiki/HTML) - Hypertext Markup Language
-* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Cascading Style Sheets
+* [SCSS](https://sass-lang.com/) - Sassy CSS
 * [VS Code](https://code.visualstudio.com/) - The code editor used
 
 ## Assets
