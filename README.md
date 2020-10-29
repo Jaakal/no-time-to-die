@@ -6,7 +6,7 @@ Link to live version [No Time To Die](https://no-time-to-die.herokuapp.com/)
 
 ## Screenshot
 
-![Screenshot of the webpage](https://github.com/Jaakal/no-time-to-die/blob/master/images/screenshot.png)
+![Screenshot of the webpage](https://github.com/Jaakal/no-time-to-die/blob/master/images/no-time-to-die.gif)
 
 ## Getting Started
 
@@ -49,5 +49,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 * [Official Trailer](https://youtu.be/VTnDYxwhSaI?t=144) - Trailer used for reference
-* [Fonts](https://fontsinuse.com/uses/28137/no-time-to-die-logo-and-teaser) - Actual fonts
-* [Start Button](https://www.youtube.com/watch?v=3RRgVHd2TXQ) - Animated glowing button reference
+* [Fonts](https://fontsinuse.com/uses/28137/no-time-to-die-logo-and-teaser) - Fonts used for reference
+* [Start Button](https://www.youtube.com/watch?v=3RRgVHd2TXQ) - Animated glowing button used for reference

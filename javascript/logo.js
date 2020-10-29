@@ -1910,19 +1910,16 @@ function draw007Logo() {
 function draw() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  time = new Date();
-  currentTime = time.getSeconds() * 1000 + time.getMilliseconds();
+  currentTime = (new Date()).getTime()
 
-  for(let i = 0; i < letterFunctionsArray.length; i++) {
+  for(let i = 0; i < letterFunctionsArray.length; i += 1)
     letterFunctionsArray[i]();
-  }
 
   window.requestAnimationFrame(draw);
 }
 
 $(".original").on("click", function() {
-  time = new Date();
-  startTime = startTime || (time.getSeconds() * 1000 + time.getMilliseconds());
+  startTime = (new Date()).getTime()
 
   letterFunctionsArray.push(drawAnimatedLetterNFirst);
   letterFunctionsArray.push(drawAnimatedLetterOFirst);
@@ -1943,18 +1940,14 @@ $(".original").on("click", function() {
   draw();
 });
 
-$(".refresh-button").on("click", function() {
+$(".refresh-button").on("click", () => {
   $('.letter').addClass('fade-out');
   $('.refresh-button-wrapper').addClass('close-button');
   $('.canvas').addClass('fade-out');
   $('.canvas').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
-    function(e) {
-      location.reload();
-  });
+    () => location.reload()
+  );
 });
 
-$(window).on('resize',function() { location.reload(); });
-
-$(document).ready(function() {
-  $('.start-button-wrapper').addClass('fade-in');
-})
+$(window).on('resize', () => location.reload());
+$(document).ready(() => $('.start-button-wrapper').addClass('fade-in'))
